@@ -23,6 +23,14 @@ var buttonDictionary = {
 
 function clickText(event) {
     display.innerHTML = display.innerHTML + buttonDictionary[this.id]
+    try {
+        eval(display.innerHTML)
+        execute.style.backgroundColor = "lightseagreen"
+    }
+    catch (error) {
+        console.log("error detected")
+        execute.style.backgroundColor = "red"
+    }
 }
 
 function clearDisplay(event) {
