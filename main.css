@@ -1,0 +1,42 @@
+.calculator {
+    width: 240px;
+    background-color: lightcoral;
+}
+
+button, .display {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 0;
+    font-size: 30px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+    line-height: 48px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    border: solid 1pt white;
+}
+
+.display {
+    width: 170px;
+    height: 50px;
+    background-color: peachpuff;
+}
+
+.button__operator {
+    background-color: aquamarine;
+    color: darkgreen;
+}
+
+.button__special {
+    background-color: lightseagreen;
+    color: peachpuff;
+}
+
+.button__input {
+    background-color: aqua;
+    color: darkgreen;
+}
