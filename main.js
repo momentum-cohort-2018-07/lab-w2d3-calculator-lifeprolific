@@ -27,9 +27,10 @@ function checkValid () {
     try {
         eval(display.innerHTML)
         execute.style.backgroundColor = "lightseagreen"
+        execute.classList.remove("alert")
     }
     catch (error) {
-        execute.style.backgroundColor = "red"
+        execute.classList.add("alert")
     }
 }
 
@@ -48,7 +49,7 @@ function typeText(event) {
 
 function clearDisplay(event) {
     display.innerHTML = ""
-    execute.style.backgroundColor = "lightseagreen"
+    execute.classList.remove("alert")
 }
 
 function evaluate(event) {
@@ -66,7 +67,7 @@ function evaluate(event) {
 function removeExplosion() {
     display.innerHTML = ""
     window.clearTimeout(explosionTimeout)
-    execute.style.backgroundColor = "lightseagreen"
+    execute.classList.remove("alert")
 }
 
 //add event listeners

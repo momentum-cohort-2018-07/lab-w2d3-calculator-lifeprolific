@@ -48,20 +48,22 @@ img {
     width:100%;
 }
 
-#execute {
-    animation-name: shiver;
-    animation-duration: 300ms;
+.alert {
+    animation-name: warning;
+    animation-duration: 500ms;
     animation-iteration-count: infinite;
-    border: 20px solid yellow;
-
 }
 
-@keyframes shiver {
+@keyframes warning {
     0% {
-        border: 10px;
+        background-color: yellow;
     }
     
+    50% {
+        background-color: red;
+    }
+
     100% {
-        border: 0px;
+        background-color: yellow;
     }
   }
