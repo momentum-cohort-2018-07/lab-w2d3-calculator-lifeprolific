@@ -12,6 +12,7 @@ button, .display {
     vertical-align: top;
     font-weight: bold;
     line-height: 48px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 button {
@@ -26,11 +27,6 @@ button {
     background-color: peachpuff;
 }
 
-.button__operator {
-    background-color: aquamarine;
-    color: darkgreen;
-}
-
 .button__special {
     background-color: lightseagreen;
     color: peachpuff;
@@ -38,5 +34,10 @@ button {
 
 .button__input {
     background-color: aqua;
+    color: darkgreen;
+}
+
+.button__operator {
+    background-color: aquamarine;
     color: darkgreen;
 }
