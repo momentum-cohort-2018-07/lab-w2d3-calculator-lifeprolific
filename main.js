@@ -21,7 +21,7 @@ var buttonDictionary = {
     add:"+",
 }
 
-function addText(event) {
+function clickText(event) {
     display.innerHTML = display.innerHTML + buttonDictionary[this.id]
 }
 
@@ -31,21 +31,30 @@ function clearDisplay(event) {
 
 function evaluate(event) {
     try {
-        display.innerHTML = eval(display.innerHTML)
+        if (display.innerHTML != "") {
+            display.innerHTML = eval(display.innerHTML)
+        }
     }
     catch(error) {
         display.innerHTML = "<img src='./explosion.gif' id='explosionImg'>"
+        explosionTimeout = window.setTimeout(removeExplosion,1000)
     }
 }
 
 function removeExplosion() {
-
+    display.innerHTML = ""
+    window.clearTimeout(explosionTimeout)
 }
 
 for (inputButton of inputButtons) {
-    inputButton.addEventListener("click", addText)
+    inputButton.addEventListener("click", clickText)
 }
 
 clear.addEventListener("click", clearDisplay)
 
 execute.addEventListener("click", evaluate)
+
+document.addEventListener('keypress', (event) => {
+    const keyName = event.key
+    display.innerHTML = display.innerHTML + keyName
+  })
