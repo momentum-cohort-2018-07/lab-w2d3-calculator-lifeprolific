@@ -1,5 +1,6 @@
 var inputButtons = document.getElementsByClassName("button__input")
-
+var clear = document.getElementById("clear")
+var execute = document.getElementById("execute")
 var display = document.getElementById("display")
 
 var buttonDictionary = {
@@ -12,6 +13,7 @@ var buttonDictionary = {
     b7:"7",
     b8:"8",
     b9:"9",
+    b0:"0",
     decimal:".",
     divide:"/",
     multiply:"*",
@@ -23,6 +25,18 @@ function addText(event) {
     display.innerHTML = display.innerHTML + buttonDictionary[this.id]
 }
 
+function clearDisplay(event) {
+    display.innerHTML = ""
+}
+
+function evaluate(event) {
+    display.innerHTML = eval(display.innerHTML)
+}
+
 for (inputButton of inputButtons) {
     inputButton.addEventListener("click", addText)
 }
+
+clear.addEventListener("click", clearDisplay)
+
+execute.addEventListener("click", evaluate)
