@@ -30,7 +30,16 @@ function clearDisplay(event) {
 }
 
 function evaluate(event) {
-    display.innerHTML = eval(display.innerHTML)
+    try {
+        display.innerHTML = eval(display.innerHTML)
+    }
+    catch(error) {
+        display.innerHTML = "<img src='./explosion.gif' id='explosionImg'>"
+    }
+}
+
+function removeExplosion() {
+
 }
 
 for (inputButton of inputButtons) {

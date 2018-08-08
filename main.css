@@ -43,3 +43,8 @@ button {
     background-color: aquamarine;
     color: darkgreen;
 }
+
+img {
+    width:100%;
+    bottom: 0;
+}
