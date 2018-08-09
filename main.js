@@ -35,7 +35,7 @@ function checkValid () {
 }
 
 function clickText(event) {
-    display.innerHTML = display.innerHTML + buttonDictionary[this.id]
+    display.innerHTML = display.innerHTML + buttonDictionary[event.target.id]
     checkValid()
 }
 
